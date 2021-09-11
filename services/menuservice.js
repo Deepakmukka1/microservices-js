@@ -1,17 +1,17 @@
 const express=require('express');
 const axios=require('axios')
 const app=express();
-const menu=[];
-app.get('/',async(req,res)=>{
+app.get('/menu',async(req,res)=>{
     try {
         
-        const results=await axios.get('http://localhost:3000/orders');
-        const newArr=[...results]
-        newArr.push({id:10,name:'Food added from microservice'})
+        const {data}=await axios.get('http://localhost:3000/orders');
+        const newArr=[...data]
+        newArr.push({id:10,name:'Food added from microservice menu'})
         res.send(newArr)
     } catch (error) {
         res.status(500).send("Internal Server")
     }
 })
-
-module.exports=app
+app.listen('3001',()=>{
+    console.log("Listening on 3001");
+})
