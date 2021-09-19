@@ -1,6 +1,6 @@
 const { exec } = require("child_process");
 
-exec("node services/marks.services.js", (error, stdout, stderr) => {
+exec("node services/marks.microservice.js", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -12,7 +12,7 @@ exec("node services/marks.services.js", (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
 });
 
-exec("node services/students.services.js", (error, stdout, stderr) => {
+exec("node services/students.microservice.js", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
