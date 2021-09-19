@@ -1,3 +1,3 @@
 # Restaurant microservice
 
-A Simple microservice build in node environment
+A Simple microservice built in node environment
