@@ -1,0 +1,26 @@
+[
+  {
+    "registrationNumber": "20SED2341",
+    "studentName": "Rajesh",
+    "age": 15,
+    "branch": "CSE"
+  },
+  {
+    "registrationNumber": "19SED2928",
+    "studentName": "Ravi",
+    "age": 19,
+    "branch": "ECE"
+  },
+  {
+    "registrationNumber": "20MDE2341",
+    "studentName": "Harish",
+    "age": 21,
+    "branch": "EEE"
+  },
+  {
+    "registrationNumber": "18CBS2001",
+    "studentName": "Mahesh",
+    "age": 20,
+    "branch": "EIE"
+  }
+]

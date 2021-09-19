@@ -1,11 +1,6 @@
-// const express=require('express')
-// const orders=require('./services/orderservice')
-// const menu=require('./services/menuservice')
-// const app=express();
-
 const { exec } = require("child_process");
 
-exec("node services/orderservice.js", (error, stdout, stderr) => {
+exec("node services/marks.services.js", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -17,7 +12,7 @@ exec("node services/orderservice.js", (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
 });
 
-exec("node services/menuservice.js", (error, stdout, stderr) => {
+exec("node services/students.services.js", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;

@@ -1,0 +1,32 @@
+[
+  {
+    "registrationNumber": "20SED2341",
+    "studentName": "Rajesh",
+    "marks": [
+      { "courseName": "Networks", "score": 42 },
+      { "courseName": "Operating systems", "score": 38 },
+      { "courseName": "DBMS", "score": 44 },
+      { "courseName": "Microservices", "score": 50 }
+    ]
+  },
+  {
+    "registrationNumber": "19SED2928",
+    "studentName": "Ravi",
+    "marks": [
+        { "courseName": "Circuits", "score": 24 },
+        { "courseName": "Operating systems", "score": 38 },
+        { "courseName": "Thoery of computation", "score": 25 },
+        { "courseName": "Microservices", "score": 50 }
+      ]
+  },
+  {
+    "registrationNumber": "20MDE2341",
+    "studentName": "Harish",
+    "marks": [
+        { "courseName": "Basic EEE", "score": 49 },
+        { "courseName": "Maths", "score": 31 },
+        { "courseName": "DBMS", "score": 29 },
+        { "courseName": "Compiler design", "score": 45 }
+      ]
+  }
+]
