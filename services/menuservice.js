@@ -3,7 +3,6 @@ const axios=require('axios')
 const app=express();
 app.get('/menu',async(req,res)=>{
     try {
-        
         const {data}=await axios.get('http://localhost:3000/orders');
         const newArr=[...data]
         newArr.push({id:10,name:'Food added from microservice menu'})
