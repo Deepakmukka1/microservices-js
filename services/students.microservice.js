@@ -2,9 +2,19 @@ const axios = require("axios");
 const express = require("express");
 const app = express();
 const students = require("../databases/students.json");
+
+/**
+ * Initial route
+ */
+
 app.get("/", async (req, res) => {
   res.send("Students service is running");
 });
+
+/**
+ * Display the list of all students
+ */
+
 app.get("/students", async (req, res) => {
   try {
     res.status(200).send(students);
@@ -12,6 +22,11 @@ app.get("/students", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+/**
+ * Details of student by student name
+ */
+
 app.get("/students/:studentname", async (req, res) => {
   try {
     const studentName = req.params.studentname;
@@ -24,6 +39,10 @@ app.get("/students/:studentname", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
+
+/**
+ * Marks of student by student name , this route communicates with marks microservice
+ */
 
 app.get("/students/:studentname/marks", async (req, res) => {
   try {
@@ -38,6 +57,11 @@ app.get("/students/:studentname/marks", async (req, res) => {
     else res.status(500).send("Server error");
   }
 });
+
+/**
+ * Listen on 3001 port
+ */
+
 app.listen("3001", () => {
   console.log("Listening on 3001");
 });
