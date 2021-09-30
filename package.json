@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha tests/index.js",
     "start": "node app.js",
-    "build": "babel services/marks.microservice.js --out-file build/marks-compiled.js",
-    "prebuild": "babel services/students.microservice.js --out-file build/students-compiled.js"
+    "package": "babel services/marks.microservice.js --out-file build/marks-compiled.js",
+    "prepackage": "babel services/students.microservice.js --out-file build/students-compiled.js"
   },
   "author": "Mukka deepak",
   "license": "ISC",
