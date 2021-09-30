@@ -2,6 +2,8 @@ const axios = require("axios");
 const express = require("express");
 const app = express();
 const students = require("../databases/students.json");
+const dotenv = require('dotenv');
+dotenv.config();
 
 /**
  * Initial route
@@ -62,6 +64,15 @@ app.get("/students/:studentname/marks", async (req, res) => {
  * Listen on 3001 port
  */
 
-app.listen("3001", () => {
-  console.log("Listening on 3001");
-});
+ console.log(process.env.NODE_ENV)
+
+ if(process.env.NODE_ENV=="development")
+ {
+  app.listen("3001", () => {
+    console.log("Listening on 3001");
+  });
+ }
+
+else module.exports.students=app
+
+

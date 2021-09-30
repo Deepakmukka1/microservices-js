@@ -4,16 +4,24 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node services/marks.microservice.js & node services/students.microservice.js"
+    "test": "SET NODE_ENV=testing & mocha tests/index.js",
+    "start": "SET NODE_ENV=development & node app.js",
+    "build": "babel services/marks.microservice.js --out-file build/marks-compiled.js",
+    "prebuild": "babel services/students.microservice.js --out-file build/students-compiled.js"
   },
   "author": "Mukka deepak",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
   }
 }

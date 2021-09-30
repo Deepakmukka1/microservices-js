@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const dotenv = require('dotenv');
+dotenv.config();
 const marks = require("../databases/marks.json");
 
 /**
@@ -35,6 +37,11 @@ app.get("/marks/:studentname", (req, res) => {
  * Listen on 3000 port
  */
 
-app.listen("3000", () => {
+console.log(process.env.NODE_ENV)
+if(process.env.NODE_ENV=="development")
+{
+  app.listen("3000", () => {
   console.log("Listening on 3000");
 });
+}
+else module.exports.marks=app
