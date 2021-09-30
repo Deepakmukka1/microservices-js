@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "SET NODE_ENV=testing & mocha tests/index.js",
-    "start": "SET NODE_ENV=development & node app.js",
+    "test": "mocha tests/index.js",
+    "start": "node app.js",
     "build": "babel services/marks.microservice.js --out-file build/marks-compiled.js",
     "prebuild": "babel services/students.microservice.js --out-file build/students-compiled.js"
   },

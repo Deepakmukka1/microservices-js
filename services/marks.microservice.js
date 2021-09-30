@@ -33,15 +33,8 @@ app.get("/marks/:studentname", (req, res) => {
   else res.status(200).send(marksOfStudent);
 });
 
-/**
- * Listen on 3000 port
- */
+module.exports.marks=app
 
-console.log(process.env.NODE_ENV)
-if(process.env.NODE_ENV=="development")
-{
-  app.listen("3000", () => {
-  console.log("Listening on 3000");
-});
-}
-else module.exports.marks=app
+
+
+

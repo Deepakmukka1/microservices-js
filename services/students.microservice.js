@@ -60,19 +60,7 @@ app.get("/students/:studentname/marks", async (req, res) => {
   }
 });
 
-/**
- * Listen on 3001 port
- */
+module.exports.students=app
 
- console.log(process.env.NODE_ENV)
-
- if(process.env.NODE_ENV=="development")
- {
-  app.listen("3001", () => {
-    console.log("Listening on 3001");
-  });
- }
-
-else module.exports.students=app
 
 
