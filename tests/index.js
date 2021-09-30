@@ -24,7 +24,7 @@ describe('Unit testing the /marks route', function() {
     });
 });
 
-describe('Unit testing the /marks/rajesh route', function() {
+describe('Unit testing the /marks/:studentname route', function() {
 
     it('should return OK status', function() {
       return request(marks)
